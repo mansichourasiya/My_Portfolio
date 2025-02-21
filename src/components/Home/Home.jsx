@@ -3,7 +3,7 @@ import "./Home.css"
 import resume from '../../assets/mansi.pdf'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import download from '../../assets/download logo.png'
-import image from '../../assets/image.jpg'
+import image from '../../assets/main_img.jpeg'
 
 export default function Home() {
   return (
@@ -16,7 +16,7 @@ export default function Home() {
 
     <div className="home-action">
     <div className='home-connect'><AnchorLink className='anchorlink' offset={50} href='#contact'>connect with me</AnchorLink></div>
-   <a className='home-resume' href={resume}>My resume</a>
+   <a className='home-resume' href={resume} target='_blank'>My resume</a>
    
   
    
