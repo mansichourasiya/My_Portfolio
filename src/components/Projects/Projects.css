@@ -1,0 +1,125 @@
+.myprojects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 60px;
+    margin: 60px 15px;
+}
+
+.myprojects-title h1 {
+    padding: 0 15px;
+    font-size: 3.3rem;
+    font-weight: 900;
+    text-align: center;
+    color: #fff;
+}
+
+.myprojects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    width: 100%;
+}
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+    padding: 20px;
+    background: linear-gradient(135deg, #6a93ff, #56ccf2);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.project-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border: 2px solid #ffffff;
+}
+
+.project-container img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.project-container:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.project-container h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0;
+}
+
+.project-container p {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #e6f1ff;
+    margin: 5px 0 15px;
+}
+
+.project-container a {
+    display: inline-block;
+    padding: 6px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #56ccf2;
+    background-color: #ffffff;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.project-container a:hover {
+    background-color: #dbeaff;
+    color: #305fba;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    .myprojects {
+        gap: 40px;
+        margin: 40px 10px;
+    }
+
+    .myprojects-title h1 {
+        font-size: 2rem;
+    }
+
+    .myprojects-container {
+        gap: 20px;
+    }
+
+    .project-container {
+        padding: 15px;
+    }
+
+    .project-container img {
+        max-width: 100%;
+    }
+
+    .project-container h2 {
+        font-size: 1.2rem;
+    }
+
+    .project-container p {
+        font-size: 0.8rem;
+    }
+
+    .project-container a {
+        font-size: 12px;
+        padding: 5px 15px;
+    }
+}

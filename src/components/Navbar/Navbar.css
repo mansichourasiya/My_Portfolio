@@ -1,0 +1,115 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 170px;
+}
+.navbar h1{
+   font-size: 32px;
+   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    font-weight: 900;
+     
+}
+
+.nav-menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 60px;
+    font-size: 18px;
+}
+.nav-menu li{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+.nav-menu li:hover{
+    transition: 0.4s;
+    transform: scale(1.1);
+
+
+}
+
+.nav-connect{
+    padding:20px 40px ;
+    background:linear-gradient(267deg, #DA7C25 0.36%, #B923E1 102%) ;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 50px;
+    transition: 0.5s
+}
+
+.nav-connect:hover{
+    transform: scale(1.05);
+    
+}
+
+.anchorlink{
+    text-decoration: none;
+    color: white;
+}
+
+
+.nav-close{
+    display: none;
+  }
+
+  .nav-open{
+      display: none;
+    }
+
+
+    @media(max-width: 768px) {
+      .navbar {
+          margin: 20px 20px; /* Adjusted for smaller screen space */
+      }
+  
+      .nav-connect {
+          display: none; /* Hides the connect button in mobile view */
+      }
+  
+      .nav-open {
+          display: block; /* Ensures the menu icon is visible */
+          position: fixed;
+          top: 20px;
+          right: 20px;
+          width: 30px; /* Added width for better sizing */
+          cursor: pointer;
+          z-index: 3; /* Ensures it is above other elements */
+      }
+  
+      .nav-close {
+          display: block; /* Displays the close icon */
+          position: absolute;
+          top: 20px;
+          right: 20px;
+          width: 30px;
+          cursor: pointer;
+      }
+  
+      .nav-menu {
+          position: fixed;
+          top: 0;
+          left: -350px; /* Hidden by default */
+          flex-direction: column; /* Vertical layout for items */
+          align-items: start;
+          gap: 30px; /* Spacing between menu items */
+          height: 100%;
+          width: 350px;
+          background-color: #1F0016; /* Retains the background color */
+          z-index: 2;
+          padding: 40px 20px; /* Adjusted padding for better spacing */
+          transition: left 0.5s ease; /* Smooth transition for menu toggle */
+      }
+  
+      .nav-menu li {
+          font-size: 24px; /* Adjusted for readability on smaller screens */
+          padding-left: 30px; /* Adjusted padding for alignment */
+          flex-direction: row;
+          align-items: center;
+          margin-top: 20px; /* Reduced margin for better layout */
+          gap: 15px;
+      }
+  }
+  
